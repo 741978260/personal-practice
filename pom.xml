@@ -21,20 +21,60 @@
     </modules>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <junit.version>4.12</junit.version>
+        <druid.version>1.1.9</druid.version>
+        <mysql.version>6.0.6</mysql.version>
+        <mybatisplus.version>2.3</mybatisplus.version>
+        <mybatisplus.spring.boot.version>1.0.5</mybatisplus.spring.boot.version>
+
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 切面类@Aspect等 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+
+        <!-- mysql驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!-- 阿里巴巴druid数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!-- MP 核心库 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+        <!-- mybatisplus与springboot整合 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatisplus-spring-boot-starter</artifactId>
+            <version>${mybatisplus.spring.boot.version}</version>
+        </dependency>
+
     </dependencies>
 
     <!-- 阿里云maven仓库 -->

@@ -1,13 +1,22 @@
 package com.practice.personal;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class PersonalAdminApplication {
+@MapperScan(basePackages = {"com.practice.personal.modules.*.dto"})
+public class PersonalAdminApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(PersonalAdminApplication.class, args);
+    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(PersonalAdminApplication.class);
     }
 
 }
