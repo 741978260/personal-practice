@@ -31,10 +31,16 @@ mybatis-plus:
     logic-delete-value: -1
     logic-not-delete-value: 0
     #自定义填充策略接口实现
-    meta-object-handler: com.baomidou.springboot.xxx
+    meta-object-handler: com.practice.personal.common.config.AutoFillMetaObjectHandler
     #自定义SQL注入器
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
     call-setters-on-nulls: true
+
+# mysql
+spring:
+    # 环境 dev|test|prod
+    profiles:
+        active: @profileActive@
