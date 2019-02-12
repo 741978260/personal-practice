@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.practice.personal.modules.*.dto"})
+@MapperScan(basePackages = {"com.practice.personal.modules.*.dao"})
 public class PersonalAdminApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

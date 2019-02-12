@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.practice.personal.modules.sys.dao.SysUserDao">
+
+    <!-- 查询用户的所有菜单ID -->
+    <select id="queryUserPermissions" resultType="long">
+		select distinct rp.permission_id from sys_user_role ur
+			LEFT JOIN sys_role_permission rp on ur.role_id = rp.role_id
+		where ur.user_id = #{userId}
+	</select>
+
+</mapper>
