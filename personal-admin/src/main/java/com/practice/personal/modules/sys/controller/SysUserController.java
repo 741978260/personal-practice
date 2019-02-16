@@ -18,8 +18,8 @@ public class SysUserController {
     private SysUserRoleService sysUserRoleService;
 
     @GetMapping("/test")
-    @RequiresPermissions(value = "edit")
-//    @RequiresPermissions(value = "query")
+//    @RequiresPermissions(value = "edit")
+    @RequiresPermissions(value = "query")
     public String test(){
         return "this is test。。";
     }
