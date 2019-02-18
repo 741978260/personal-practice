@@ -18,6 +18,7 @@
     <modules>
         <module>personal-admin</module>
         <module>personal-common</module>
+        <module>personal-etest</module>
     </modules>
 
     <properties>
